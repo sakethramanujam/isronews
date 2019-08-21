@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <link href="{{base_url}}/static/css/index.css" type="text/css">
+    <title>Isro News</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Isro Updates Scraped</h1>
+        </div>
+        <div class="row">
+        {% for article in articles %}
+        <div class="card" style="width: 20em;">
+            <div class="card-header text-muted">
+                {{article['date']}}
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{article['headline']}}</p><a class="btn btn-primary" href="{{article['link']}}">View More</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+</body>
+
+</html>
