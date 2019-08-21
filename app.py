@@ -1,5 +1,5 @@
 from flask import Flask, render_template, jsonify
-from isro import news, archives
+from helpers.isro import news, archives
 
 app = Flask(__name__)
 
